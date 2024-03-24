@@ -80,19 +80,19 @@ print(zn5)
 print(zn6)
 print(zn7)
 
-# mat = np.ones((2,2))
-# mat_1 = np.ones((2,2))
-# mat = mat + mat_1
-# mat_1 = np.array(([1,2],[3,4]))
+mat = np.ones((2,2))
+mat_1 = np.ones((2,2))
+mat = mat + mat_1
+mat_1 = np.array(([1,2],[3,4]))
 # print(mat)
 # print(mat - mat_1)
 # print(mat * mat_1)
 # print(mat / mat_1)
 
-# a = np.dot(mat,mat_1)
-# print(a)
-# b = np.dot(mat_1)
-# print(b)
+a = np.dot(mat,mat_1)
+print(a)
+b = mat.dot(mat_1)
+print(b)
 
 # a = np.arange(10)
 # print(a)
@@ -105,17 +105,20 @@ print(zn7)
 # print(a[2:5])
 
 mat = np.arange(25)
-mat = mat.reshape((5,5))
-print(mat[1:])
-print(mat[:1])
-print(mat[:-1:])
-print(mat[2:6, 1:3])
-print(mat[:, range(2,6,2)])
-print('')
+
+mat = mat.reshape((5, 5))
+print(mat[1:], "\n")
+print(mat[:1], "\n")
+print(mat[:, -1:], "\n")
+print(mat[2:6, 1:k3], "\n")
+print(mat[:, range(2,6,2)], "\n")
 
 x = np.array([[0,1,2],
               [3,4,5],
               [6,7,8],
               [9,10,11]])
-print(x)
-rows = np.array([[0,0]])
+print(x, "\n")
+rows = np.array([[0,0], [3,3]])
+cols = np.array([[0,2],[0,2]])
+y=x[rows, cols]
+print(y)
