@@ -21,3 +21,8 @@ m=np.array((np.arange(2),np.arange(2)))
 print(m.shape)
 print(m.ndim)
 
+macierz = np.array([[1,2] , [3,4] , [5,6]])
+print(macierz)
+print(macierz.shape)
+print(macierz.ndim)
+
