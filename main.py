@@ -61,3 +61,45 @@ print(mat_diag_k)
 
 z = np.fromiter(range(5), dtype='int32')
 print(z)
+
+znaki = b'abcdef'
+zn1 = np.frombuffer(znaki, dtype='S1')
+zn2 = np.frombuffer(znaki, dtype='S2')
+print(zn1)
+print(zn2)
+
+znaki = 'abcdef'
+zn3 = np.array(list(znaki))
+zn4 = np.array(list(znaki), dtype='S1')
+zn5 = np.array(list(b'abcdef'))
+zn6 = np.fromiter(znaki, dtype='S1')
+zn7 = np.fromiter(znaki, dtype='U1')
+print(zn3)
+print(zn4)
+print(zn5)
+print(zn6)
+print(zn7)
+
+mat = np.ones((2,2))
+mat_1 = np.ones((2,2))
+mat = mat + mat_1
+mat_1 = np.array(([1,2],[3,4]))
+print(mat)
+print(mat - mat_1)
+print(mat * mat_1)
+print(mat / mat_1)
+
+# a = np.dot(mat,mat_1)
+# print(a)
+# b = np.dot(mat_1)
+# print(b)
+
+a = np.arange(10)
+print(a)
+s=slice(2,7,2)
+print(a[s])
+s = range(2,7,2)
+print(a[s])
+print(a[2:7:2])
+print(a[1:])
+print(a[2:5])
